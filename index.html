@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!--enlaces-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- cabecera -->
+    <header>
+        <h1>DojoWeather</h1>
+        <div class="lista-nav">
+            <a class="link-nav" onclick="alerta()" href="#">Burbank</a>
+            <a class="link-nav" onclick="alerta()" href="#">Chicago</a>
+            <a class="link-nav" onclick="alerta()" href="#">Dallas</a>
+        </div>
+    </header>
+    <!-- medio -->
+    <div class="centro">
+        <div class="block1">
+            <h2>San Jose</h2>
+            <div class="selector">
+                <p>show temperature in</p>
+                <select name="temperature" id="temp" onchange="cambioTemp(this)">
+                    <option value="celcius">°C</option>
+                    <option value="farenheit">°F</option>
+                </select>
+            </div>
+        </div>
+        <div class="block2">
+            <div class="block21">
+                <h3>Today</h3>
+                <img class="temp-img" src="img/some_rain.png" alt="clouds">
+                <p class="block21-text">some rain</p>
+                <div class="valores">
+                    <p class="mayor"><span id="temp1" >24</span>°</p>
+                    <p class="menor"><span id="temp2" >18</span>°</p>
+                </div>
+            </div>
+            <div class="block21">
+                <h3>Tomorrow</h3>
+                <img class="temp-img" src="img/some_sun.png" alt="clouds">
+                <p class="block21-text">some sun</p>
+                <div class="valores">
+                    <p class="mayor"><span id="temp3">27</span>°</p>
+                    <p class="menor"><span id="temp4">19</span>°</p>
+                </div>
+            </div>
+            <div class="block21">
+                <h3>Friday</h3>
+                <img class="temp-img" src="img/some_clouds.png" alt="clouds">
+                <p class="block21-text">some clouds</p>
+                <div class="valores">
+                    <p class="mayor"><span id="temp5">21</span>°</p>
+                    <p class="menor"><span id="temp6">16</span>°</p>
+                </div>
+            </div>
+            <div class="block21">
+                <h3>Saturday</h3>
+                <img class="temp-img" src="img/some_sun.png" alt="clouds">
+                <p class="block21-text">some sun</p>
+                <div class="valores">
+                    <p class="mayor"><span id="temp7">26</span>°</p>
+                    <p class="menor"><span id="temp8">21</span>°</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- aviso al final -->
+    <div class="cookie">
+        <div class="cookie1">
+            <img src="img/cookie.png" alt="cookie">
+            <div class="cookie1-text">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media
+                    features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+        </div>
+        <div class="cookie2">
+            <button onclick="eliminar()">I Accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
